@@ -14,15 +14,9 @@ function solution(A) {
 }
 
 function checkSolution(solution) {
-  for (let i = 0, length = solution.length; i < length; i++) {
-    const currentTreeHeight = solution[i];
-
-    if (i !== 0) {
-      const previousTreeHeight = solution[i - 1];
-
-      if (currentTreeHeight < previousTreeHeight) {
-        return false
-      }
+  for (let i = 0, length = solution.length - 1; i < length; i++) {
+    if (solution[i] > solution[i + 1]) {
+      return false;
     }
   }
   return true;
