@@ -2,7 +2,6 @@ function solution(A) {
   let solutions = [];
 
   for (let i = 0, length = A.length; i < length; i++) {
-
     const treeChopped = A.splice(i, 1)[0];
 
     if (checkSolution(A)) {
